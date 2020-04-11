@@ -1,0 +1,11 @@
+{% extends "bases/base.html" %}
+
+{% block title %}
+    Post
+{% endblock title %}
+
+{% block content %}
+    {% for post in Posts %}
+        <h4>{{post.date|date:"d-m-Y"}}<a href="post/{{post.id}}">{{post.title}}</a></h4>
+    {% endfor %}
+{% endblock content %}
