@@ -7,3 +7,7 @@ def information(request):
     return render(request, 'pages/information.html')
 def contact(request):
     return render(request, 'pages/contact.html')
+def error_4(request, exception):
+    return render(request, 'pages/error.html')
+def error_5(request):
+    return render(request, 'pages/error.html')

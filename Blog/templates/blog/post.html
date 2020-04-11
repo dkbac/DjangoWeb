@@ -6,6 +6,6 @@
 
 {% block content %}
     {% for post in Posts %}
-        <h4>{{post.date|date:"d-m-Y"}}<a href="post/{{post.id}}">{{post.title}}</a></h4>
+        <h4>{{post.date|date:"d-m-Y"}}<a href='{% url 'postfetchbyid' post.id %}'>{{post.title}}</a></h4>
     {% endfor %}
 {% endblock content %}

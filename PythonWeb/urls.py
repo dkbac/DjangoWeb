@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler400, handler403, handler404, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Home.urls')),
     path('blog/', include('Blog.urls')),
 ]
+
+handler400 = "Home.views.error_4"
+handler403 = "Home.views.error_4"
+handler404 = "Home.views.error_4"
+handler500 = "Home.views.error_5"
